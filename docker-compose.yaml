@@ -12,6 +12,7 @@ services:
       - ./vault/policies:/vault/policies
       - ./vault/data:/vault/data
       - ./vault/logs:/vault/logs
+      - ./plugins/quorum-hashicorp-vault-plugin:/vault/plugins/quorum-hashicorp-vault-plugin:ro
     environment:
       ROOT_TOKEN_PATH: /vault/.root
       VAULT_ADDR: http://vault:8200
